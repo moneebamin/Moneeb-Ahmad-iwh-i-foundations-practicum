@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title Update Driver List
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .form-wrapper
+            h1 Add/Edit Driver List
+            form(action="/update-cobj", method="post")
+                div
+                    label(for="driver_name") Driver Name:
+                    input(type="text", id="driver_name", name="driver_name", required)
+                div
+                    label(for="email") Email:
+                    input(type="text", id="email", name="email", required)
+                div
+                    label(for="driver_licence") Driver Licence:
+                    input(type="text", id="driver_licence", name="driver_licence", required)
+                div
+                    input(type="submit", value="Submit")
+            a(href="/") Return to the Homepage
