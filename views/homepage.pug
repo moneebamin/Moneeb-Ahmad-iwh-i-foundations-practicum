@@ -1,17 +1,20 @@
-{
-    "name": "integrating-with-hubspot-i-foundations-practicum",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "HubSpot Academy learner",
-    "license": "ISC",
-    "dependencies": {
-        "axios": "^1.8.2",
-        "dotenv": "^16.4.7",
-        "express": "^4.21.2",
-        "pug": "^3.0.3"
-    }
-}
+doctype html
+html
+    head
+        title Homepage
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Driver List
+        a(href="/update-cobj") Add/Edit Driver List
+        table
+            thead
+                tr
+                    th Driver Name
+                    th Email 
+                    th Driver Licence
+            tbody
+                each book in books
+                    tr
+                        td= book.properties.driver_name
+                        td= book.properties.email
+                        td= book.properties.driver_licence
